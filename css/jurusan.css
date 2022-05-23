@@ -1,0 +1,645 @@
+/* @font-face{
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins/Poppins-Black.ttf') format('truetype');
+    src: url('../fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+    src: url('../fonts/Poppins/Poppins-ExtraBold.ttf') format('truetype');
+    src: url('../fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+    src: url('../fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+
+} */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --cursor-main: #264653;
+    --timing-function:cubic-bezier(0.52, -0.91, 0.2, 1.6) ;
+    /* --clr-white: #eeeeee;
+    --clr-shadow: rgba(0,0,0,.1);
+    --dark-blue:#3A5987 ;
+    --gray-blue: #e4e4e4;   
+    --light-blue: #1baaee; */
+
+    --clr-white: #e4e4e4;
+    --light-blue: #7b9fcf;
+    --dark-blue: #3a5987;
+    --dark-dark-blue: #4e4b56;
+    --clr-shadow: rgba(0,0,0,.1);
+    --light2-blue: #d5deef;
+
+    --transition-linear: .3s linear;
+    --transition-cubic: .3s var(--timing-function);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+::-webkit-scrollbar{
+    width: .3rem;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background: var(--dark-blue);
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 8rem 10rem;
+}
+
+nav {
+    display: flex;
+    padding: 1em 5%;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    width: 100vw;
+    transition: .3s;
+}
+nav.navbar-fixed{
+    padding: .7rem 5%;
+    background: rgba(255,255,255,.85);
+    /* backdrop-filter: blur(5px); */
+    box-shadow: 0 5px 10px var(--clr-shadow);
+}
+nav .logo {
+    display: flex;
+    align-items: center;
+    padding-right:20px;
+}
+
+.logo img {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+}
+.logo h3 {
+    font-weight: 600;
+    margin-left: .9rem;
+    font-size: 1.3rem;
+    color: var(--dark-blue);
+    margin-top: -1px;
+    letter-spacing: .4px;
+}
+
+
+
+nav .nav-links {
+    display: flex;
+    gap: 12px;
+    list-style:none;
+    text-transform: uppercase;
+    align-items: center;
+}
+
+nav .nav-links li {
+    position: relative;
+}
+
+nav .nav-links li::before{
+    content: '';
+    width: 70%;
+    height: 3px;
+    position: absolute;
+    bottom: -.3rem;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform .3s linear;
+    border-radius: 1000px;
+    background: var(--dark-blue);
+
+}
+nav.navbar-fixed .nav-links li::before {
+    background: var(--dark-blue);
+}
+
+nav .nav-links li:hover::before{
+    transform: scaleX(1);
+    transform-origin: left center;
+}
+
+nav .nav-links li.inNavigate::before {
+    transform: scaleX(1);
+}
+
+
+.nav-links li a {
+    color: var(--dark-blue);
+    letter-spacing: .6px;
+    font-size: 1rem;
+    text-decoration: none;
+}
+nav .nav-links li.inNavigate a {
+    font-weight: 500;
+}
+.burger {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 100;
+}
+
+.burger span {
+    display: block;
+    width: 40px;
+    height: 4px;
+    border-radius: 1000px;
+    background: var(--dark-blue);
+    transition: .5s;
+    transition-timing-function: var(--timing-function);
+}
+
+.burger span:first-child {
+    transform-origin:bottom left;
+}
+.burger span:nth-child(2){
+    transform: translateX(0);
+    width: 30px;
+}
+
+.burger span:last-child {
+    transform-origin:top left;
+}
+
+.burger span + span {
+    margin-top: 10px;
+}
+
+.burger.active span:first-child {
+    transform: rotate(45deg);
+}
+
+.burger.active span:nth-child(2){
+    transform: translateX(1000px);
+
+}
+
+.burger.active span:last-child {
+    transform: rotate(-45deg);
+}
+
+.burger.active + .nav-links{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+/* nav end */
+
+.container-jurusan h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--dark-dark-blue);
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.jurusan-page {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 7rem;
+    justify-content: center;
+    gap: 3rem;
+
+    position: relative;
+    /* line up there for pm design */
+}
+.j-akl.jurusan-page {
+    flex-direction: row-reverse;
+}
+
+.jurusan-page .img-jurusan{
+    width: 25rem;
+    height: 30rem;
+    position: relative;
+    z-index: 1;
+    box-shadow: 2px 5px 10px rgba(0,0,0,.1);
+    /* margin: auto; */
+
+}
+.j-tkj .img-jurusan::before{
+    content: '';
+    width: 70%;
+    height: 40%;
+    background: var(--dark-blue);
+    position: absolute;
+    bottom: -1.5rem;
+    left: -1.5rem;
+    z-index: -1;
+}
+
+
+.j-akl .img-jurusan::before{
+    content: '';
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -1.5rem;
+    right: -1.5rem;
+    border: 1px solid var(--dark-dark-blue);
+}
+
+
+
+.j-pm.jurusan-page::before{
+    content: '';
+    width: 100%;
+    height: calc(30rem + 4rem);
+    position: absolute;
+    top:-2rem;
+    left:0;
+    transform: translateX(-70%);
+    background-color: var(--dark-blue);
+    z-index: -1;
+}
+
+.jurusan-page .img-jurusan img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    margin: auto;
+    display: block;
+}
+
+
+.jurusan-page .content-jurusan{
+    width: 40%;
+    padding: 1rem;
+}
+
+.jurusan-page .content-jurusan li {
+    list-style: none;
+}
+
+
+.content-jurusan h3 {
+    font-size: 2rem;
+    margin-bottom: .5rem;
+    font-weight: 700;
+    color: var(--dark-dark-blue);
+}
+.content-jurusan span {
+    color: var(--dark-blue);
+    margin-bottom: 1rem;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.15rem;
+}
+
+.content-jurusan .pel-jurusan li{
+    margin-left: 20px;
+    position: relative;
+    font-weight: 700;
+    color: var(--dark-dark-blue);
+}
+.content-jurusan .pel-jurusan li + li {
+    margin-top: .6rem;
+}
+
+.content-jurusan .pel-jurusan li::before{
+    content: '';
+    position: absolute;
+    left: -20px;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: var(--dark-blue);
+}
+
+.content-jurusan .pel-jurusan li:first-child::before{
+    background: var(--light-blue);
+}
+
+
+.footer{
+    padding: 60px 0;
+    background: var(--dark-blue);         
+    color: var(--clr-white);
+}
+
+.footer .container {
+    max-width: 1170px;
+    margin:auto;
+}
+
+.footer .row{
+    display: flex;
+    flex-wrap:wrap
+}
+
+.footer img {
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: cover;
+}
+
+.footer .title {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.footer .title h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0rem;
+}
+
+.footer h4{
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    position:relative;
+    height: 40px;
+}
+.footer .main-col h4 {
+    height: auto;
+    font-size: 1.5rem;
+    line-height: 33px;
+}
+
+.footer h4::before{
+    content: '';
+    position: absolute;
+    bottom: -.25rem;
+    left: 0;
+    background: var(--clr-white);
+    width: 40px;
+    height:4px;
+}
+.footer .main-col h4::before{
+    display: none;
+} 
+.footer ul li {
+    list-style: none;
+}
+.footer ul li + li {
+    margin-top: 10px;
+}
+
+
+.footer ul li a{
+    color: var(--clr-white);
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition: .1s linear;
+}
+
+.footer ul li a:hover{
+    padding-left: 10px;
+}
+
+
+
+.footer-col {
+    width: 25%;
+    padding: 2rem;
+}
+.main-col {
+    width: 45%;
+}
+
+
+.footer-col:last-child ul {
+    display: flex;
+    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 40px);
+}
+.footer-col:last-child ul li {
+    margin: 0;
+}
+.footer-col:last-child ul li a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    background: rgba(255,255,255,.2);
+    border-radius: 50%;
+}
+.footer-col:last-child ul li a:hover{
+    background: white;
+    color:var(--dark-blue);
+    padding: 0;
+}
+
+
+/* media breakpoints */
+@media (max-width: 1200px){
+    section{
+        padding: 8rem 8rem;
+    }
+}
+
+@media (max-width: 1085px){
+    .jurusan-page .content-jurusan{
+        width: 25rem;
+    }
+    .j-tkj .img-jurusan::before{
+        width: calc(100% + 3rem);
+    }
+
+
+    .j-akl .img-jurusan::before{
+        content: '';
+        z-index: -1;
+        width: calc(100% + 2rem);
+        height: calc(100% + 2rem);
+        bottom: -1rem;
+        right: -1rem;
+    }
+
+    .j-pm.jurusan-page::before {
+        width: 200vw;
+        transform: translateX(-100vw);
+    }
+}
+
+@media (max-width: 1024px){
+    nav .burger {
+        display: inline-block;
+    }
+    nav .nav-links {
+        background: white;
+        width: 80%;
+        box-shadow: -10px 0 10px rgba(0,0,0,.1);
+        position: absolute;
+        top: 0;
+        right:0;
+        height: 100vh;
+        transition: .5s ease-in-out;
+        transform: translateX(110%);
+        
+        /* display: flex */
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    nav .nav-links li + li {
+        margin-top: 10px;
+    }
+
+    nav .nav-links li a{
+        font-size: 20px !important;
+        color: var(--dark-blue);
+    }
+    
+    nav .nav-links.active {
+        transform: translateX(0%);
+    }
+    
+    /* footer */
+    .footer-col{
+        width: 50%;
+    }
+    .main-col{
+        width: 100%;
+    }
+    .footer .main-col h4 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 700px){
+    section {
+        padding: 8rem 5rem;
+    }
+    .burger span {
+        width: 30px;
+        height: 3px;
+    }
+    .burger span:nth-child(2){
+        width: 20px;
+    }
+    .burger span + span {
+        margin-top: 7.5px;
+    }
+    .logo h3 {
+        font-size: 1.15rem;
+    }
+}
+
+@media (max-width: 530px){
+    section {
+        padding: 8rem 3rem;
+    }
+    .container-jurusan h1 {
+        font-size: 2.2rem;
+    }
+    nav .nav-links li a{
+        font-size: 16px;
+    }
+    .content-jurusan h3 {
+        font-size: 1.7rem;
+        margin-bottom: .5rem;
+    }
+    .content-jurusan span {
+        color: var(--dark-blue);
+        margin-bottom: 1rem;
+        display: inline-block;
+        font-size: 1rem;
+    }
+
+    .content-jurusan .pel-jurusan li{
+        position: relative;
+    }
+    .footer-col{
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px){
+    section {
+        padding: 8rem 2rem;
+    }
+    nav .nav-links li a{
+        font-size: 16px !important;
+    }
+    .jurusan-page .img-jurusan {
+        height: 25rem;
+        width: 20rem;
+    }
+    .j-pm.jurusan-page::before{
+        height: calc(25rem + 4rem);
+    }
+    .content-jurusan .pel-jurusan li {
+        font-size: .9rem;   
+    }
+
+    .logo h3 {
+        margin-left: 8px;
+        font-size: 1.1rem;
+    }
+
+}
+
+@media (max-width: 300px){
+
+    .jurusan-page .img-jurusan {
+        height: 20rem;
+        width: 15rem;
+        margin: auto;
+    }
+    .j-pm.jurusan-page::before{
+        height: calc(20rem + 4rem);
+    }
+
+    .content-jurusan .pel-jurusan li {
+        font-size: .8rem;   
+    }
+    .content-jurusan h3 {
+        font-size: 1.5rem;
+    }
+    .content-jurusan span {
+        font-size: .9rem;
+    }
+
+    .footer .title {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .footer{
+        font-size: 15px;
+    }
+    .footer .title h4{
+        text-align: center;
+    }
+    .footer .logo p{
+        text-align: center;
+    }
+
+    .footer .title img{
+        width: 60px;
+        height: 60px;
+    }
+
+    .footer .title h4::before {
+        bottom: -.5rem;
+        left: 50%;
+        transform: translateX(-55%);
+    }
+
+
+    .logo h3 {
+        margin-left: 8px;
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/jurusan.css">
+</head>
+<body>
+    <!-- nav start -->
+    <nav id="nav" class="nav">
+        <a href='index.html#home' class="logo">  
+            <img src="img/logo.png" alt="img">
+            <h3 class="">SMK Kristen Immanuel</h3>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="index.html#home">home</a></li>
+            <li><a href="index.html#tentang">tentang kami</a></li>
+            <li class="inNavigate"><a href="index.html#jurusan">jurusan</a></li>
+            <li><a href="index.html#prestasi">prestasi</a></li>
+            <li><a href="index.html#ekstrakulikuler">Ekstrakulikuler</a></li>
+            <li><a href="index.html#berita">berita</a></li>
+        </ul>
+
+        <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <!-- nav end -->
+    
+    <section class="container-jurusan">
+        <h1 id="judul-jurusan">Jurusan</h1>
+
+        <div class="jurusan-page j-tkj" id="tkj">
+            <div class="img-jurusan">
+                <img src="img/main5.jpg" alt="tkj">
+            </div>
+            <div class="content-jurusan">
+                <h3>Teknik Komputer dan Jaringan</h3>
+                <span>Jurusan ini kamu akan mempelajari:</span>
+                <ul class="pel-jurusan">
+                    <li>Web Development</li>
+                    <li>IT Software</li>
+                    <li>Komputer dan Jaringan Dasar</li>
+                    <li>Aplikasi Editor</li>
+                    <li>UI/UX</li>
+                    <li>Sistem Jaringan</li>
+                </ul>
+            </div>
+        </div> 
+
+        <div class="jurusan-page j-akl" id="akl">
+            <div class="img-jurusan">
+                <img src="img/accountant.jpg" alt="akl">
+            </div>
+            <div class="content-jurusan">
+                <h3>Akuntansi dan Keuangan Lembaga</h3>
+                <span>Jurusan ini kamu akan mempelajari:</span>
+                <ul class="pel-jurusan">
+                    <li>Aplikasi Pengolah Angka</li>
+                    <li>Siklus Akuntansi</li>
+                    <li>Administrasi Pajak</li>
+                    <li>Akuntansi Keuangan + Spreadsheet</li>
+                    <li>Praktik Akuntansi Perusahaan</li>
+                    <li>Komputer Akuntansi (MYOB)</li>
+                </ul>
+            </div>
+        </div> 
+
+        <div class="jurusan-page j-pm" id="pm">
+            <div class="img-jurusan">
+                <img src="img/business.jpg" class="img-jurusan" alt="pm">
+            </div>
+            <div class="content-jurusan">
+                <h3>Bisnis Daring dan Pemasaran</h3>
+                <span>Jurusan ini kamu akan mempelajari:</span>
+                <ul class="pel-jurusan">
+                    <li>Komunikasi (Kombis)</li>
+                    <li>Bisnis dan Pemasaran Moderen (Marketing)</li>
+                    <li>Perencanaan dan Pelaksanaan Pemasaran (Perbis)</li>
+                    <li>Administrasi Transaksi</li>
+                    <li>Bisnis Ritel</li>
+                    <li>Bisnis Online</li>
+                    <li>Penataan Produk</li>
+                </ul>
+            </div> 
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col main-col">
+                    <div class="title">
+                        <img src="img/logo.png" alt="">
+                        <div class="logo">
+                            <h4>SMK Kristen Immanuel</h4>
+                            <p>+62 895-2443-5865</p>
+                        </div>
+                    </div>
+                    <p>SMK Kristen Immanuel menjadi unit yang Sekolah Kristen Immanuel yang sangat bersemangat mengembangkan bakat siswa serta membentuk produk teknologi dan pengembangan bisnis dari setiap peserta didik. Dijiwai motto yang kuat, sekolah ini membawa keluarga besarnya untuk sukses.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Tautan</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#about">Tentang Kami</a></li>
+                        <li><a href="index.html#jurusan">Jurusan</a></li>
+                        <li><a href="index.html#extra">Ekstrakulikuler</a></li>
+                        <li><a href="index.html#prestasi">Prestasi</a></li>
+                        <li><a href="index.html#berita">Berita Terbaru</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="https://www.tiktok.com/@smkimmanuelptk"><i class="fa-brands fa-tiktok"></i></a></li>
+                        <li><a href="https://www.youtube.com/c/SMKImmanuelPontianak"><i class="fa-brands fa-youtube"></i></a></li>
+                        <li><a href="https://www.instagram.com/smkimmanuelptk/"><i class="fa-brands fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+        window.onscroll = function(){
+            const nav = document.querySelector('#nav');
+            const fixedNav = nav.offsetTop;
+
+            if (window.pageYOffset > fixedNav){
+                nav.classList.add('navbar-fixed');
+            }else {
+                nav.classList.remove('navbar-fixed');
+            }   
+        }
+
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('nav .nav-links')
+        burger.addEventListener('click', function(){
+            burger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        })
+
+
+    </script>
+</body>
+</html>
