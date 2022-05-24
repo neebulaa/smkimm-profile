@@ -98,7 +98,7 @@ nav {
 }
 nav.navbar-fixed{
     padding: .7rem 5%;
-    background: white;
+    background: rgba(255,255,255,.85);
     backdrop-filter: blur(5px);
     box-shadow: 0 5px 10px var(--clr-shadow);
 }
