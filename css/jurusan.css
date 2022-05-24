@@ -592,7 +592,9 @@ nav .nav-links li.inNavigate a {
 }
 
 @media (max-width: 300px){
-
+    .nav .logo h3 {
+        font-size: .9rem;
+    }
     .jurusan-page .img-jurusan {
         height: 20rem;
         width: 15rem;

@@ -67,7 +67,7 @@ cardlists.forEach(e=>e.addEventListener('click', function(event){
 let about = document.querySelector('.about-content');
 let headings = document.querySelectorAll('.heading');
 let prestasiCards = document.querySelectorAll('#prestasi .image');
-let extraCards = document.querySelectorAll('#extra .card');
+let extraCards = document.querySelectorAll('#ekstrakulikuler .card');
 let newsCards = document.querySelectorAll('#berita .card-news');
 let footerCols = document.querySelectorAll('.footer .footer-col');
 
@@ -95,7 +95,6 @@ object.forEach(obj=>{
 // give delay for each extra cards
 
 let objectTransition = [extraCards, newsCards, footerCols];
-
 objectTransition.forEach(objT=>{
     objT.forEach((obj, id)=>{
         obj.style.transition = `.3s linear ${.2 + id*.2}s`;
@@ -143,7 +142,6 @@ const observerSection = new IntersectionObserver(entries=>{
                 giveClickEventLi(li, index, entries);
 
                 if(li.firstElementChild.innerHTML.toLowerCase().includes(entry.target.id.toLowerCase())){
-                    console.log(entry.target);
                     navLinksLiInNavigation.classList.remove('inNavigate');
                     inNavigate(li);
                 }

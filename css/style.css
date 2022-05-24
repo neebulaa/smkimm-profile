@@ -469,7 +469,7 @@ section {
     margin-top: 4px;
 }
 
-.contact {
+.cta-btn {
     background: var(--dark-blue);
     font-size: 19px;
     color: var(--clr-white);
@@ -486,7 +486,7 @@ section {
     transition: .3s linear;
 }
 
-.contact:hover{
+.cta-btn:hover{
     opacity: .8;
 }
 
@@ -844,7 +844,7 @@ section{
 
 
 
-/* extrakulikuler section start*/
+/* ekstrakulikuler section start*/
 
 .extra .card-lists {
     display: grid;
@@ -1122,7 +1122,7 @@ section{
 
 /* intersection observer start*/
 
-.about .about-content, #extra .card{
+.about .about-content, #ekstrakulikuler .card{
     transform: translateY(-50px);
     opacity:0;
 }
@@ -1161,7 +1161,7 @@ section{
 .jurusan-cards .jurusan-card:last-child, .achievments-container .our-gallery .image:last-child{
     transition: .3s linear .6s;
 } 
-.jurusan-card.animate, .achievments-container .our-gallery .image.animate, #extra .card.animate, .card-news.animate, .footer-col.animate{
+.jurusan-card.animate, .achievments-container .our-gallery .image.animate, #ekstrakulikuler .card.animate, .card-news.animate, .footer-col.animate{
     opacity: 1;
     transform: translateY(0);
 }
@@ -1331,7 +1331,7 @@ section{
         font-size: 16px;
     }
 
-    .contact {
+    .cta-btn {
         margin: 20px auto;
     }
 
@@ -1502,6 +1502,10 @@ section{
         width: 350px;
         height: 350px;
     }
+    .cta-btn {
+        padding: .6rem 1.5rem;
+        font-size: 18px;
+    }
 
     .home .content h1 {
         font-size: 35px;
@@ -1613,6 +1617,10 @@ section{
     nav .nav-links li a{
         font-size: 16px !important;
     }
+    .cta-btn {
+        padding: .55rem 1.3rem;
+        font-size: 17px;
+    }
     .home .content h3 {
         font-size: 20px;
         margin-bottom: 8px;    
@@ -1681,11 +1689,11 @@ section{
         font-size: 5vw;
     }
 
-    .contact {
+    .cta-btn {
+        padding: .5rem 1.15rem;
         font-size: 16px;
     }
     .nav .logo h3 {
-        margin-left: 20px;
         font-size: .9rem;
     }
     .home .image {
