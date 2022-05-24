@@ -310,27 +310,11 @@ section {
     animation: popOpacity .5s .5s var(--timing-function) forwards;
 }
 
-/* .home .sosmed a::before{
-    content: '';
-    position: absolute;
-    top: -120%;
-    left: -100%;
-    height: 150px;
-    width: 15px;
-    transform: rotate(30deg);
-    background: rgba(255,255,255,.5);
-    transition: .8s linear;
-} */
 
 .home .sosmed a:hover{
     color: var(--light-blue);
     transform: scale(1.2);
 }
-
-/* .home .sosmed a:hover::before{
-    top:100%;
-    left: 100%;
-} */
 
 .home .image {
     width: 500px;
@@ -774,8 +758,6 @@ section{
     height: 100%;
     top: 0;
     left: 0;
-    overflow: hidden;
-    /* background: salmon; */
     z-index: -1;
 }
 
@@ -789,11 +771,13 @@ section{
     height: 200px;
     box-shadow: 0 0 10px rgba(0,0,0,.1);
     z-index: -1;
+    background: white;
 }
 .bubble:last-child {
-    bottom: -10%;
+    bottom: -12%;
     top:auto;
     left: -100px;
+    z-index: 5;
 }
 
 .achievments-container .our-gallery{
@@ -845,7 +829,9 @@ section{
 
 
 /* ekstrakulikuler section start*/
-
+#ekstrakulikuler{
+    background: transparent;
+}
 .extra .card-lists {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
