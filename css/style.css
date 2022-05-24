@@ -82,6 +82,10 @@ html {
     }
 }
 
+#page {
+    width: 100vw;
+    overflow-x:hidden;
+}
 
 /* nav start */
 nav {
@@ -91,7 +95,7 @@ nav {
     align-items: center;
     position: fixed;
     z-index: 100;
-    width: 100%;
+    width: 100vw;
     opacity: 0;
     animation: slideVertical .5s var(--timing-function) forwards;
     transition: .3s;

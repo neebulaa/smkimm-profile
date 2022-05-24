@@ -53,7 +53,7 @@ jurusanCards.forEach(card=>card.addEventListener('click', function(){
 }));
 
 // extrakulikuler section
-const cardlists = document.querySelectorAll('#extra .card-lists .card');
+const cardlists = document.querySelectorAll('#ekstrakulikuler .card-lists .card');
 
 cardlists.forEach(e=>e.addEventListener('click', function(event){
     e.classList.toggle('card-open');

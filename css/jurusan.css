@@ -29,7 +29,7 @@
     --transition-cubic: .3s var(--timing-function);
 }
 
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -56,6 +56,11 @@ html {
 
 section {
     padding: 8rem 10rem;
+}
+
+#page {
+    width: 100vw;
+    overflow-x:hidden;
 }
 
 nav {
@@ -194,7 +199,15 @@ nav .nav-links li.inNavigate a {
 .burger.active + .nav-links{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
+
+
+
 /* nav end */
+
+.container-jurusan {
+    width: 100vw;
+    overflow: hidden;
+}
 
 .container-jurusan h1 {
     text-align: center;
@@ -256,12 +269,11 @@ nav .nav-links li.inNavigate a {
 
 .j-pm.jurusan-page::before{
     content: '';
-    width: 100%;
+    width: 43%;
     height: calc(30rem + 4rem);
     position: absolute;
     top:-2rem;
-    left:0;
-    transform: translateX(-70%);
+    left: -10rem;
     background-color: var(--dark-blue);
     z-index: -1;
 }
@@ -456,7 +468,6 @@ nav .nav-links li.inNavigate a {
         width: calc(100% + 3rem);
     }
 
-
     .j-akl .img-jurusan::before{
         content: '';
         z-index: -1;
@@ -467,8 +478,8 @@ nav .nav-links li.inNavigate a {
     }
 
     .j-pm.jurusan-page::before {
-        width: 200vw;
-        transform: translateX(-100vw);
+        width: 100vw;
+        left: -8rem;
     }
 }
 
@@ -535,6 +546,10 @@ nav .nav-links li.inNavigate a {
     .logo h3 {
         font-size: 1.15rem;
     }
+    .j-pm.jurusan-page::before {
+        width: 100vw;
+        left: -5rem;
+    }
 }
 
 @media (max-width: 530px){
@@ -570,6 +585,10 @@ nav .nav-links li.inNavigate a {
     .footer .logo h4 {
         font-size: 1.3rem;
     }
+    .j-pm.jurusan-page::before {
+        width: 100vw;
+        left: -3rem;
+    }
 }
 
 @media (max-width: 450px){
@@ -593,6 +612,10 @@ nav .nav-links li.inNavigate a {
     .logo h3 {
         margin-left: 8px;
         font-size: 1.1rem;
+    }
+    .j-pm.jurusan-page::before {
+        width: 100vw;
+        left: -2rem;
     }
 
 }
