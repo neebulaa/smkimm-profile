@@ -111,7 +111,7 @@ nav .logo {
 .logo img {
     width: 3rem;
     height: 3rem;
-    object-fit: cover;
+    object-fit: contain;
 }
 .logo h3 {
     font-weight: 600;
@@ -1008,9 +1008,9 @@ section{
 }
 
 .footer img {
-    width: 2.5rem;
-    height: 2.5rem;
-    object-fit: cover;
+    width: 3.2rem;
+    height: 3.2rem;
+    object-fit: contain;
 }
 
 .footer .title {
@@ -1566,6 +1566,7 @@ section{
 
     .footer-col{
         width: 100%;
+        padding: 1.2rem 2rem;
     }
 }
 
@@ -1596,6 +1597,10 @@ section{
     }
     #berita .news-content p{
         font-size: .8rem;
+    }
+
+    .footer .logo h4 {
+        font-size: 1.3rem;
     }
 }
 
@@ -1651,6 +1656,15 @@ section{
 
     .achievments-container .our-gallery{
         grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
+
+    .footer img {
+        width: 4rem;
+        height: 4rem;
+        object-fit: contain;
+    }
+    .footer .logo h4 {
+        line-height: 1.8rem;
     }
 
 }
@@ -1714,15 +1728,19 @@ section{
     }
     .footer .title h4{
         text-align: center;
+        font-size: 1.4rem;
+
     }
     .footer .logo p{
         text-align: center;
     }
 
     .footer .title img{
-        width: 60px;
-        height: 60px;
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
     }
+
 
 }
 

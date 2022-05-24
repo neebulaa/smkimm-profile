@@ -83,7 +83,7 @@ nav .logo {
 .logo img {
     width: 3rem;
     height: 3rem;
-    object-fit: cover;
+    object-fit: contain;
 }
 .logo h3 {
     font-weight: 600;
@@ -339,13 +339,13 @@ nav .nav-links li.inNavigate a {
 
 .footer .row{
     display: flex;
-    flex-wrap:wrap
+    flex-wrap:wrap;
 }
 
 .footer img {
-    width: 2.5rem;
-    height: 2.5rem;
-    object-fit: cover;
+    width: 3.2rem;
+    height: 3.2rem;
+    object-fit: contain;
 }
 
 .footer .title {
@@ -561,8 +561,14 @@ nav .nav-links li.inNavigate a {
     .content-jurusan .pel-jurusan li{
         position: relative;
     }
+
     .footer-col{
         width: 100%;
+        padding: 1.2rem 2rem;
+
+    }
+    .footer .logo h4 {
+        font-size: 1.3rem;
     }
 }
 
@@ -589,6 +595,17 @@ nav .nav-links li.inNavigate a {
         font-size: 1.1rem;
     }
 
+}
+
+@media (max-width: 400px){
+    .footer img {
+        width: 4rem;
+        height: 4rem;
+        object-fit: contain;
+    }
+    .footer .logo h4 {
+        line-height: 1.8rem;
+    }
 }
 
 @media (max-width: 300px){
@@ -623,14 +640,16 @@ nav .nav-links li.inNavigate a {
     }
     .footer .title h4{
         text-align: center;
+        font-size: 1.4rem;
     }
     .footer .logo p{
         text-align: center;
     }
 
     .footer .title img{
-        width: 60px;
-        height: 60px;
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
     }
 
     .footer .title h4::before {
@@ -644,4 +663,6 @@ nav .nav-links li.inNavigate a {
         margin-left: 8px;
         font-size: 1rem;
     }
+
+
 }
