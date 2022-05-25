@@ -452,21 +452,18 @@ section {
 }
 
 .home .content p {
-    /* font-size: 16px; */
     color: var(--clr-white);
     margin-top: 4px;
 }
 
 .cta-btn {
     background: var(--dark-blue);
-    font-size: 20px;
+    font-size: 19px;
     color: var(--clr-white);
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 5px;
-    letter-spacing: .5px;
     box-shadow: 0 5px 10px var(--clr-shadow);
-    /* border: 3px solid var(--dark-blue); */
     padding: .75rem 2rem;
     display: inline-block;
     margin-top: 20px;
