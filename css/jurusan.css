@@ -333,9 +333,6 @@ nav .nav-links li.inNavigate a {
     background: var(--dark-blue);
 }
 
-.content-jurusan .pel-jurusan li:first-child::before{
-    background: var(--light-blue);
-}
 
 
 .footer{
