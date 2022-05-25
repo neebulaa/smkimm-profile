@@ -308,9 +308,7 @@ section {
     border-radius: 5px;
     position: relative;
     overflow: hidden;
-
     opacity: 0;
-
     animation: popOpacity .5s .5s var(--timing-function) forwards;
 }
 
@@ -464,7 +462,7 @@ section {
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 5px;
-    letter-spacing: 1px;
+    letter-spacing: .5px;
     box-shadow: 0 5px 10px var(--clr-shadow);
     /* border: 3px solid var(--dark-blue); */
     padding: .75rem 2rem;
@@ -689,7 +687,6 @@ section {
 .jurusan-card .content p {
     font-size: .9rem;
     color: #4e4b56;
-    /* margin-top: .5rem; */
 }
 
 .jurusan-card .action {
@@ -1237,13 +1234,6 @@ section{
     .jurusan-card {
         width: calc(100%/3 - 48px);
     }
-    .jurusan-card .content h3{
-        font-size: 1.4rem;
-    }
-
-    .jurusan-card .content p {
-        font-size: .8rem;
-    }
     .news .hero-news{
         height: 470px;
     }
@@ -1331,7 +1321,9 @@ section{
         width: 100%;
         height: auto;
         top: 85%;
+        justify-content: center;
         flex-direction: row;
+        margin-left: -.35rem;
     }
 
 
@@ -1408,9 +1400,6 @@ section{
         font-size: 1.5rem;
     }
 
-    .jurusan-card .content p {
-        font-size: .9rem;
-    }
     .jurusan::before {
         height: 21rem;
     }
@@ -1471,14 +1460,6 @@ section{
     .jurusan-card {
         width:100%;
     }
-    .jurusan-card .content h3{
-        font-size: 1.5rem;
-    }
-
-    .jurusan-card .content p {
-        font-size: .9rem;
-    }
-
 }
 
 @media (max-width: 640px){
@@ -1544,9 +1525,6 @@ section{
         font-size: 1.4rem;
     }
 
-    .jurusan-card .content p {
-        font-size: .8rem;
-    }
 
     .heading h2 {
         font-size: 10vw;
@@ -1613,7 +1591,7 @@ section{
         font-size: 16px !important;
     }
     .cta-btn {
-        padding: .55rem 1.3rem;
+        padding: .6rem 1.3rem;
         font-size: 17px;
     }
     .home .content h3 {
@@ -1694,7 +1672,7 @@ section{
     }
 
     .cta-btn {
-        padding: .5rem 1.15rem;
+        padding: .55rem 1.15rem;
         font-size: 16px;
     }
     .nav .logo h3 {

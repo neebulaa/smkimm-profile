@@ -140,7 +140,6 @@ const observerSection = new IntersectionObserver(entries=>{
         if(entry.isIntersecting){
             navLinksLi.forEach((li, index)=>{
                 giveClickEventLi(li, index, entries);
-
                 if(li.firstElementChild.innerHTML.toLowerCase().includes(entry.target.id.toLowerCase())){
                     navLinksLiInNavigation.classList.remove('inNavigate');
                     inNavigate(li);
